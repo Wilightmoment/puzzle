@@ -1,0 +1,195 @@
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    font-family: 'Noto Serif TC', serif
+ul
+    list-style: none
+    padding: 0
+    margin: 0
+
+.container-fluid
+    height: 100vh
+    .row
+        height: 100vh
+
+.item-hover
+    background-color: rgba(0, 0, 0, .3)
+
+.invisible
+    display: none
+
+.bg-img
+    width: 100%
+    height: 100vh
+    overflow: hidden
+    background-image: url(../img/img-bg-Qingming.png)
+    background-position: center
+    background-size: cover
+    filter: blur(5px)
+    position: absolute
+    z-index: -999
+    &:after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100vh
+        background-color: rgba(0, 0, 0, 0.5)
+
+.puzzle-title
+    color: white
+    font-size: 2.25rem
+.btn.btn-outline-primary
+    color: white 
+    border-color: white
+    font-size: 1.5rem
+    position: fixed
+    bottom: 31px
+    left: 50%
+    transform: translateX(-50%)
+    padding:
+        left: 7.9rem
+        right: 7.9rem
+    &:hover
+        background-color: #fff
+        border-color: #fff
+        color: #000
+
+.puzzles
+    display: flex
+    flex-wrap: wrap
+    width: 540px
+    height: 540px
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    &.puzzles-bring
+        border: 1px solid white
+        box-shadow: 0px 0px 30px 0px white
+        animation: glow 1.2s 3
+        position: relative
+        transition: all 0.5s
+        &:after
+            content: ""
+            position: absolute
+            left: 50%
+            top: 0
+            display: flex
+            width: 540px
+            height: 540px
+            border: 1px solid white
+            z-index: 9999
+            animation: glow 1.2s 3
+            transform: translateX(-50%)
+        &:before
+            content: ""
+            position: absolute
+            display: flex
+            top: -8px
+            left: 50%
+            width: 556px
+            height: 556px
+            border: 1px solid rgba(255, 255, 255, 0.5)
+            z-index: 1000
+            animation: glow 1.2s 3
+            animation-delay: 0.1s
+            opacity: 0
+    .puzzle-item
+        border: 1px solid rgba(255, 255, 255, .3)
+        display: flex
+        width: 33.3333%
+        height: 33.3333%
+        position: relative
+        & > img
+            position: absolute
+        &.correct
+            box-shadow: 0 1px 15px #f9fd88
+        
+.puzzles-imgs
+    display: flex
+    flex-wrap: wrap
+    max-width: 1280px
+    height: 400px
+    position: absolute
+    
+.puzzles-random
+    width: 180px
+    height: 180px
+    z-index: 9999
+.puzzles-imgs .puzzles-random:nth-child(1) 
+  position: relative
+  top: 0%
+  right: 0%
+
+.puzzles-imgs .puzzles-random:nth-child(2) 
+  position: relative
+  top: 20%
+  left: 5%
+
+.puzzles-imgs .puzzles-random:nth-child(3) 
+  position: relative
+  top: 42%
+  left: 48%
+
+.puzzles-imgs .puzzles-random:nth-child(4) 
+  position: relative
+  top: 15%
+  left: 20%
+
+.puzzles-imgs .puzzles-random:nth-child(5) 
+  position: relative
+  top: 82%
+  left: 15%
+
+.puzzles-imgs .puzzles-random:nth-child(6) 
+  position: relative
+  top: 40%
+  left: -20%
+
+.puzzles-imgs .puzzles-random:nth-child(7) 
+  position: relative
+  top: 50%
+  left: 0%
+
+.puzzles-imgs .puzzles-random:nth-child(8) 
+  position: relative
+  top: -12%
+  right: 0%
+
+.puzzles-imgs .puzzles-random:nth-child(9) 
+  position: relative
+  top: 60%
+  left: 0%
+
+#Puzzle-2
+    left: -27.5px
+#Puzzle-5
+    top: -27.5px
+#Puzzle-6
+    left: -27.5px
+#Puzzle-7
+    top: -27.5px
+#Puzzle-8
+    left: -26.5px
+    top: -1px
+#Puzzle-9
+    top: -27.5px
+
+.end
+    color: white
+
+.btn.again
+    background-color: white
+    width: 100%
+    font-size: 1.5rem
+    font-weight: bold
+    padding: 10px
+
+@keyframes glow 
+    0%
+        transform:  translateX(-50%) scale(1)
+        opacity: 1
+    100%
+        transform:  translateX(-50%) scale(1.03)
